@@ -9,7 +9,7 @@
 <body>
     <div class="container my-5">
         <h2>List of Clients</h2>
-        <a class="btn btn-primary" href="/php/create.php" role="button">New Client</a>
+        <a class="btn btn-primary" href="/CRUD/create.php" role="button">New Client</a>
         <br>
        <table class="table">
         <thead>
@@ -29,7 +29,7 @@
           $serverName = "localhost";
           $userName = "root";
           $password = "";
-          $database = "myshop";
+          $database = "my_shop";
            
           $connection = new mysqli($serverName, $userName, $password, $database);
 
@@ -52,8 +52,8 @@
                 <td>{$row['address']}</td>
                 <td>{$row['created_at']}</td>
                 <td>
-                    <a class='btn btn-primary btn-sm' href='/php/edit.php?id={$row['id']}'>Edit</a>
-                    <a class='btn btn-danger btn-sm' href='/php/delete.php?id={$row['id']}'>Delete</a>
+                <a class='btn btn-primary btn-sm' href='/CRUD/edit.php?id={$row['id']}'>Edit</a>
+                <a class='btn btn-danger btn-sm' href='/CRUD/delete.php?id={$row['id']}'>Delete</a>
                 </td>
             </tr>";
           }
